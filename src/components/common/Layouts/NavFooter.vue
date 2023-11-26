@@ -1,4 +1,6 @@
 <script setup>
+  import { ref, inject } from 'vue';
+
   import { FwbHeading, FwbA } from 'flowbite-vue';
 
   import FacebookSVG from '../../../assets/facebook.svg';
@@ -9,11 +11,19 @@
   import PinSVG from '../../../assets/pin.svg';
   import EmailSVG from '../../../assets/email.svg';
   import PhoneSVG from '../../../assets/phone.svg';
+
+  const contact = ref();
+  const emitter = inject('emitter');
+
+  emitter.on('goToContactSection', () => {
+    contact.value.scrollIntoView({ behavior: 'smooth' });
+  });
+
 </script>
 
 <template>
-  <footer>
-    <div class="container mx-auto grid grid-cols-3 gap-3 pb-[80px]">
+  <footer ref="contact">
+    <div class="container mx-auto grid sm:grid-cols-3 grid-cols-1 sm:gap-6 gap-8 pb-[80px] px-8">
       <div class="flex flex-col space-y-4">
         <div class="flex flex-col space-y-3">
           <fwb-heading tag="h3" class="uppercase">Quick Links</fwb-heading>
@@ -52,7 +62,7 @@
       </div>
     </div>
     
-    <div class="border-t-2 border-t-gray_500">
+    <div class="border-t-2 border-t-gray_500 sm:px-8">
       <div class="flex justify-between items-center py-4 container mx-auto">
         <p class="text-gray_500">Mail All Center, Live Scan Fingerprinting</p>
         <p class="text-gray_500">

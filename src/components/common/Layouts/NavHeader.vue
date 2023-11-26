@@ -1,24 +1,26 @@
 <template>
   <fwb-navbar>
     <template #logo>
-      <img :src="logo" width="120" height="120" />
+      <fwb-a href="/" class="h-[70px]">
+        <fwb-img :src="logo" width="110" height="120"></fwb-img>
+      </fwb-a>
     </template>
     <template #default="{isShowMenu}">
       <fwb-navbar-collapse :is-show-menu="isShowMenu">
         <fwb-navbar-link link="/">
-          Home
+          <p class="text-[15px]">Home</p>
         </fwb-navbar-link>
         <fwb-navbar-link link="/services">
-          Services
+          <p class="text-[15px]">Services</p>
         </fwb-navbar-link>
         <fwb-navbar-link link="/faqs">
-          FAQS
+          <p class="text-[15px]">FAQS</p>
         </fwb-navbar-link>
         <fwb-navbar-link link="about-us">
-          About Us
+          <p class="text-[15px]">About Us</p>
         </fwb-navbar-link>
-        <fwb-navbar-link link="contact-us">
-          Contact Us
+        <fwb-navbar-link link="#" @click="goToContact">
+          <p class="text-[15px]">Contact Us</p>
         </fwb-navbar-link>
       </fwb-navbar-collapse>
     </template>
@@ -26,10 +28,21 @@
 </template>
 
 <script setup>
+import { inject } from 'vue';
+
 import {
   FwbNavbar,
   FwbNavbarCollapse,
   FwbNavbarLink,
+  FwbImg,
+  FwbA,
 } from 'flowbite-vue'
 import logo from '../../../assets/logo_transparent.png';
+
+const emitter = inject('emitter');
+
+function goToContact() {
+  emitter.emit('goToContactSection');
+}
+
 </script>

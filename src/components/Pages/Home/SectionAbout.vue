@@ -8,7 +8,7 @@
   <section class="container mx-auto py-[80px]">
     <div class="sm:px-8 flex flex-col space-y-8">
       <fwb-heading tag="h2" class="font-bold uppercase text-primary_dark text-center">Who are we</fwb-heading>
-      <div class="grid grid-cols-2 gap-1">
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-1">
         <div>
           <fwb-p class="py-8">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a eros non quam rhoncus facilisis.
