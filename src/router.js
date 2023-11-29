@@ -4,7 +4,7 @@ import Home from './components/Pages/Home/HomePage.vue';
 import Services from './components/Pages/Services/ServicesPage.vue';
 import FAQS from './components/Pages/FAQS/FAQSPage.vue';
 import About from './components/Pages/About/AboutPage.vue';
-// import Contact from './components/Pages/Contact/ContactPage.vue';
+import NotFound from './components/Pages/NotFound/NotFoundPage.vue';
 
 export default createRouter({
   history: createWebHistory(),
@@ -24,6 +24,10 @@ export default createRouter({
     {
       path: '/about-us',
       component: About,
+    },
+    {
+      path: '/:pathMatch(.*)*',
+      component: NotFound,
     }
   ],
 })

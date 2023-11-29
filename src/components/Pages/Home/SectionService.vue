@@ -9,7 +9,7 @@
 <template>
   <section class="container mx-auto px-2 sm:px-[250px]">
     <div class="grid sm:grid-cols-3 grid-cols-1 sm:gap-6 gap-3 justify-items-center">
-      <fwb-card class="py-[80px]">
+      <fwb-card class="py-[50px]">
         <div class="flex justify-center">
           <CalendarSVG />
         </div>
@@ -18,11 +18,11 @@
             Same Day Appointment
           </h5>
           <p class="font-normal text-gray-700 dark:text-gray-400">
-            Donec a eros non quam rhoncus facilisis. In bibendum porttitor interdum.
+            Mail All Center is your one-stop-shop for dozens of business products and services that allow you to focus on what you do best, while we take care of the rest.
           </p>
         </div>
       </fwb-card>
-      <fwb-card class="py-[80px]">
+      <fwb-card class="py-[50px]">
         <div class="flex justify-center">
           <FingerprintSVG />
         </div>
@@ -31,11 +31,11 @@
             Live Scan Fingerprinting
           </h5>
           <p class="font-normal text-gray-700 dark:text-gray-400">
-            Donec a eros non quam rhoncus facilisis. In bibendum porttitor interdum.
+            Need fingerprinting services? We've got you covered with our live scan fingerprinting service.
           </p>
         </div>
       </fwb-card>
-      <fwb-card class="py-[80px]">
+      <fwb-card class="py-[50px]">
         <div class="flex justify-center">
           <FileSVG />
         </div>
@@ -44,7 +44,7 @@
             Notary Services
           </h5>
           <p class="font-normal text-gray-700 dark:text-gray-400">
-            Donec a eros non quam rhoncus facilisis. In bibendum porttitor interdum.
+            Our certified notaries are here to assist you with important document notarization, and we even offer mobile notary services for your convenience.
           </p>
         </div>
       </fwb-card>

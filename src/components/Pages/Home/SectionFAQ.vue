@@ -69,7 +69,7 @@
         </fwb-accordion-panel>
       </fwb-accordion>
       <div class="flex justify-center">
-        <fwb-a href="#" class="text-secondary uppercase font-semibold">
+        <fwb-a href="/faqs" class="text-secondary uppercase font-semibold">
           <div class="flex items-center space-x-2">
             <span>More FAQS</span>
             <ChevronRightSvg />

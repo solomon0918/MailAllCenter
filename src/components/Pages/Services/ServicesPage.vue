@@ -7,6 +7,13 @@
   import MailPinSVG from '../../../assets/mail-pin.svg';
   import PackageThinSVG from '../../../assets/package-thin.svg';
   import FileLockLightSVG from '../../../assets/file-lock-light.svg';
+  import CopySVG from '../../../assets/copy.svg';
+  import DropOffShippingSVG from '../../../assets/dropoff-shipping.svg';
+  import FaxSVG from '../../../assets/fax.svg';
+  import PassportSVG from '../../../assets/passport.svg';
+  import GreetingsCardSVG from '../../../assets/greetings-card.svg';
+
+  import RibbonSection from '../../common/Ribbon/RibbonSection.vue';
 
   import { 
     FwbHeading,
@@ -28,25 +35,55 @@
       id: 1,
       title: 'Live Scan Fingerprintng',
       image: markRaw(FingerprintScanSVG),
-      description: 'Donec a eros non quam rhoncus facilisis. In bibendum porttitor interdum.',
+      description: "Need fingerprinting services? We've got you covered with our live scan fingerprinting service.",
     },
     {
       id: 2,
-      title: 'Mail Services',
+      title: 'Mailbox Rental with 24x7 Access',
       image: markRaw(MailPinSVG),
-      description: 'Donec a eros non quam rhoncus facilisis. In bibendum porttitor interdum.'
+      description: 'Secure and convenient mailbox rental services with round-the-clock access for your convenience.'
     },
     {
       id: 3,
-      title: 'Package Services',
+      title: 'FedEx and UPS Shipping (Domestic and International)',
       image: markRaw(PackageThinSVG),
-      description: 'Donec a eros non quam rhoncus facilisis. In bibendum porttitor interdum.',
+      description: "We're your trusted partners for shipping parcels domestically and internationally through FedEx and UPS.",
     },
     {
       id: 4,
-      title: 'Notary Services',
+      title: 'Notary / Mobile Notary',
       image: markRaw(FileLockLightSVG),
-      description: 'Donec a eros non quam rhoncus facilisis. In bibendum porttitor interdum.'
+      description: 'Our certified notaries are here to assist you with important document notarization, and we even offer mobile notary services for your convenience.'
+    },
+    {
+      id: 5,
+      title: 'Passport Photos',
+      image: markRaw(PassportSVG),
+      description: 'High-quality passport photos that meet all the necessary requirements.'
+    },
+    {
+      id: 6,
+      title: 'Fax (National and International)',
+      image: markRaw(FaxSVG),
+      description: "Send and receive faxes with ease, whether it's national or international."
+    },
+    {
+      id: 7,
+      title: 'Copy (Color and Black and White)',
+      image: markRaw(CopySVG),
+      description: "Our advanced printing technology can handle both color and black-and-white printing needs, large or small."
+    },
+    {
+      id: 8,
+      title: 'USPS Drop-off and Shipping',
+      image: markRaw(DropOffShippingSVG),
+      description: "Convenient USPS drop-off and shipping services for your postal needs."
+    },
+    {
+      id: 9,
+      title: 'Greeting Cards',
+      image: markRaw(GreetingsCardSVG),
+      description: "Browse our selection of greeting cards for every occasion."
     },
   ]);
 </script>
@@ -64,12 +101,11 @@
     </div>
   </section>
   <section class="container mx-auto pt-[30px] pb-[80px]">
-    <div class="sm:px-8 grid sm:grid-cols-2 grid-cols-1 gap-8 justify-items-center">
+    <div class="sm:px-8 grid sm:grid-cols-3 grid-cols-1 gap-8 justify-items-center">
       <fwb-card
         v-for="service in services"
         :key="service.id"
         variant="horizontal"
-        
       >
         <div class="flex items-center space-x-4 py-[10px] px-[40px]">
           <div class="flex justify-center">
@@ -87,5 +123,6 @@
       </fwb-card>
     </div>
   </section>
+  <ribbon-section></ribbon-section>
   <hr class="py-[30px]"/>
 </template>
